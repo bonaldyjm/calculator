@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const teclas = document.querySelectorAll("boton");
-const operadores = document.querySelectorAll("botonop")
-=======
    class Calculator {
   
     num1;
@@ -45,4 +41,3 @@ const operadores = document.querySelectorAll("botonop")
 
     const car= new Calculator();
  
->>>>>>> 841a3ae81ef8f2864c8df6bfd45c58cc77de4d98
