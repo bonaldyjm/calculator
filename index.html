@@ -6,35 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
     <link rel="stylesheet" href="./styles.css">
-
+    
 </head>
 <body onload="">
     <main>
         <form id="container" name="calculator" >
             <h2 class="titulo">calculadora</h2>
-            <input class="pantalla" type="text" name="ans" value="" >
+            <div class="historial"> <span id="historial"></span></div>
+            <input disabled class="pantalla" type="text" name="ans" value="" />
             <br>
-            <input class="boton7" type="button" value="7"  >
-            <input class="boton8" type="button" value="8">
-            <input class="boton9" type="button" value="9">
-            <input class="boton/" type="button" value="/">
+
+            <input class="boton7" type="button" value="7" onclick="printValuesToScreen(7)" />
+            <input class="boton8" type="button"  value="8"  onclick="printValuesToScreen(8)" />
+            <input class="boton9" type="button"  value="9"  onclick="printValuesToScreen(9)" />
+            <input class="boton/" type="button"   value="/" onclick="setOperation('/')">
             <br>
-            <input class="boton4" type="button" value="4">
-            <input class="boton5" type="button" value="5">
-            <input class="boton6" type="button" value="6">
-            <input class="boton*" type="button" value="*">
+            <input class="boton4" type="button"  value="4"  onclick="printValuesToScreen(4)"/>
+            <input class="boton5" type="button"  value="5"  onclick="printValuesToScreen(5)"/>
+            <input class="boton6" type="button"  value="6"  onclick="printValuesToScreen(6)"/>
+            <input class="boton*" type="button"  value="*" onclick="setOperation('*')">
             <br>
-            <input class="boton1" type="button" value="1">
-            <input class="boton2" type="button" value="2">
-            <input class="boton3" type="button" value="3">
-            <input class="boton+" type="button" value="+">
+            <input class="boton1" type="button"  value="1"  onclick="printValuesToScreen(1)"/>
+            <input class="boton2" type="button"  value="2"  onclick="printValuesToScreen(2)"/>
+            <input class="boton3" type="button"  value="3"  onclick="printValuesToScreen(3)"/>
+            <input class="boton+" type="button" name="button_+" value="+" onclick="setOperation('+')" />
             <br>
-            <input class="botonc" type="reset" value="c">
-            <input class="boton0" type="button" value="0">
-            <input class="boton," type="button" value=",">
-            <input class="boton=" type="submit" value="=">
+            <input class="botonc" type="button"    value="c" onclick="resetCalculator()" />
+            <input class="boton0" type="button"  value="0"  onclick="printValuesToScreen(0)"/>
+            <input class="boton," type="button"  value=","  onclick="printValuesToScreen()"/>
+            <input class="boton=" type="button"  value="=" onclick="doOperation()" />
         </form>
     </main>
 </body>
-    <script src="./index.js" ></script>
+<script src="./model.js" ></script>
+<script src="./index.js" ></script>
 </html>
