@@ -24,7 +24,7 @@
     margin: 8px 0;
     border: 1px solid black;
     border-radius: 1px;
-    text-align: left;
+    text-align: right;
     color: #333;
     background: #ccc;
 }
@@ -43,6 +43,10 @@ input[type=submit], [type=reset], [type=button] {
 
 }
 
+input[type=button]:hover,input[type=submit]:hover, [type=reset]:hover{
+background-color: aqua;
+}
+
 .boton:hover{
     background-color:#333 ;
 }
@@ -56,4 +60,13 @@ input[type=submit], [type=reset], [type=button] {
     text-align: center;
     margin-bottom: 10px;
     
+}
+div.historial{
+    width: 75%;
+    text-align: right;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    right: 10px;
+    color: rgb(117, 117, 117);
 }
