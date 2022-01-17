@@ -44,7 +44,7 @@ input[type=submit], [type=reset], [type=button] {
 }
 
 .boton:hover{
-    background-color:#333 ;
+    background-color:#507983 ;
 }
 
 .titulo {
@@ -56,4 +56,8 @@ input[type=submit], [type=reset], [type=button] {
     text-align: center;
     margin-bottom: 10px;
     
+}
+
+.botonop:hover {
+    background-color: #507983;
 }
