@@ -12,30 +12,33 @@
     <main>
         <form id="container" name="calculator" >
             <h2 class="titulo">calculadora</h2>
+            <div class="val"></div>
+            <div class="val"></div>
             <input class="pantalla" type="text" name="ans" value="" >
             <br>
-            <input class="boton" type="button" value="7" onclick =document.calculator.ans.value+='7'>
-            <input class="boton" type="button" value="8" onclick =document.calculator.ans.value+='8'>
-            <input class="boton" type="button" value="9" onclick =document.calculator.ans.value+='9'>
-            <input class="botonop" type="button" value="/" onclick =document.calculator.ans.value='/'>
+            <input class="boton" type="button" value="7" onclick="printOnScreen ('7')" >
+            <input class="boton" type="button" value="8" onclick="printOnScreen ('8')" >
+            <input class="boton" type="button" value="9" onclick="printOnScreen ('9')" >
+            <input class="botonop" type="button" value="÷" onclick="printOnScreenOp ('÷')">
             <br>
-            <input class="boton" type="button" value="4" onclick =document.calculator.ans.value+='4'>
-            <input class="boton" type="button" value="5" onclick =document.calculator.ans.value+='5'>
-            <input class="boton" type="button" value="6" onclick =document.calculator.ans.value+='6'>
-            <input class="botonop" type="button" value="*" onclick =document.calculator.ans.value='*'>
+            <input class="boton" type="button" value="4" onclick="printOnScreen ('4')" >
+            <input class="boton" type="button" value="5" onclick="printOnScreen ('5')" >
+            <input class="boton" type="button" value="6" onclick="printOnScreen ('6')" >
+            <input class="botonop" type="button" value="*" onclick="printOnScreenOp ('*')">
             <br>
-            <input class="boton" type="button" value="1" onclick =document.calculator.ans.value+='1'>
-            <input class="boton" type="button" value="2" onclick =document.calculator.ans.value+='2'>
-            <input class="boton" type="button" value="3" onclick =document.calculator.ans.value+='3'>
-            <input class="botonop" type="button" value="+" onclick =document.calculator.ans.value='+'>
+            <input class="boton" type="button" value="1" onclick="printOnScreen ('1')" >
+            <input class="boton" type="button" value="2" onclick="printOnScreen ('2')" >
+            <input class="boton" type="button" value="3" onclick="printOnScreen ('3')" >
+            <input class="botonop" type="button" value="+" onclick="printOnScreenOp ('+')">
             <br>
-            <input class="botonop" type="button" value="C">
-            <input class="boton" type="button" value="0" onclick =document.calculator.ans.value+='0'>
-            <input class="botonop" type="button" value="=" onclick =document.calculator.ans.value='='>
-            <input class="botonop" type="button" value="-" onclick =document.calculator.ans.value='-'>
+            <input class="botonop" type="button" value="C" onclick="deleteApp ()">
+            <input class="boton" type="button" value="0" onclick="printOnScreen ('0')" >
+            <input class="botonop" type="button" value="=" onclick="botonIgual('=')">
+            <input class="botonop" type="button" value="-" onclick="printOnScreenOp ('-')">
             <br>
         </form>
     </main>
 </body>
-    <script src="./index.js" ></script>
+<script src="./Calcu.js" ></script>
+<script src="./index.js" ></script>
 </html>

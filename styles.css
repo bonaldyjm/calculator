@@ -18,10 +18,11 @@
 }
 
 .pantalla {
+    grid-column: 1/ -1;
     width: 75%;
-    padding: 16px 32px;
-    font-size: 16px;
-    margin: 8px 0;
+    padding: 18px 36px;
+    font-size: 18px;
+    margin: 10px 2;
     border: 1px solid black;
     border-radius: 1px;
     text-align: left;
@@ -60,4 +61,14 @@ input[type=submit], [type=reset], [type=button] {
 
 .botonop:hover {
     background-color: #507983;
+}
+
+.val {
+    width: 75%;
+    text-align: right;
+    margin: auto;
+    position: relative;
+    top: 50px;
+    right: 10px;
+    color: rgb(117, 117, 117);
 }

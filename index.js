@@ -1,69 +1,64 @@
+ const calculadora = new Calculadora ();
 
-  class Calculator {   
-  
-    num1;
-    num2;
-    operation;
-  
-    constructor(){
+ 
+ function printOnScreen (num)  { 
+   if (!calculadora.operator) {
 
-    }
-     
-    
+   document.getElementsByClassName("val")[0].innerHTML += num;
+   calculadora.setValorAnterior(num)
+  }
+   if (calculadora.operator)  { 
+   calculadora.setValorActual(num)
+    document.getElementsByClassName("val")[0].innerHTML += ' ';
+    document.getElementsByClassName("val")[1].innerHTML += num;
+  }
   
-    setNum1(num1){
-       // todo aki va la logica para setar el primer operando
-   this.num1 = num1.toString()
-
-    }
-  
-    setNum2(num2){
-        // todo aki va la logica para setar el segundo operando
-        this.num2 = num2.toString()
-        
-    }
-  
-    setOperation(operation){
-         // todo aki va la logica para setar la operacion
-    this.operation = operation;
-
-    }
+}
 
 
+ 
+function deleteApp () {
+  calculadora.reset()
+  document.getElementsByClassName("val")[0].innerHTML = ""
+  document.getElementsByClassName("val")[1].innerHTML = ""
+  document.calculator.ans.value = "";
 
-    add() {
-         // todo aki va la logica para sumar
-      return this.num1 + this.num2
-    }
-  
-    rest() {
-        // todo aki va la logica para sumar
-        return this.num1 - this.num2
-    }
-  
-    multiplication() {
-        // todo aki va la logica para sumar
-        return this.num1 * this.num2
-    }
-  
-    divition() {
-        // todo aki va la logica para sumar
-       return this.num1 / this.num2
-    }
-  
-    print(){
-       // todo aki va la logica para mostrar las operaciones y el resultado
-      if (setoperation === "+") return this.add
-      else if (this.operation)
 
-    }
+}
+
+function printOnScreenOp (operator) {
+  document.calculator.ans.value = operator;
+  if(!calculadora.operator) {
+    calculadora.operator = operator
   }
 
-    const car= new Calculator();
-
-    function pantallazo() {
-      if (document.calculator.ans.)
-    } 
+  }
 
 
-   
+
+function ProcessOp (operator) {
+  if (operator === "+") calculadora.setOperator(operator);
+   if (operator === "-") calculadora.setOperator(operator);
+   if (operator === "*") calculadora.setOperator(operator);
+   if (operator === "/") calculadora.setOperator(operator);
+}
+
+function botonIgual () {
+if (calculadora.operator === "+") {
+  document.calculator.ans.value = '='
+  document.getElementsByClassName("val")[0].innerHTML= ''
+  document.getElementsByClassName("val")[1].innerHTML = calculadora.suma(calculadora.num1,calculadora.num2);
+}
+else if (calculadora.operator === "-") {
+    document.getElementsByClassName("val")[0].innerHTML= ''
+    document.getElementsByClassName("val")[1].innerHTML = calculadora.resta(calculadora.num1,calculadora.num2);
+}
+else if (calculadora.operator === "*") {
+  document.getElementsByClassName("val")[0].innerHTML= ''
+  document.getElementsByClassName("val")[1].innerHTML = calculadora.multiplicacion(calculadora.num1,calculadora.num2);
+}
+else if (calculadora.operator === "÷") {
+  document.getElementsByClassName("val")[0].innerHTML= ''
+  document.getElementsByClassName("val")[1].innerHTML = calculadora.division(calculadora.num1,calculadora.num2);
+}
+}
