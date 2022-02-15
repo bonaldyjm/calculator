@@ -72,3 +72,9 @@ input[type=submit], [type=reset], [type=button] {
     right: 10px;
     color: rgb(117, 117, 117);
 }
+.botonE {
+    width: 44%;
+}
+.botonE:hover {
+    background-color: #507983;
+}

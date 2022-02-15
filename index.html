@@ -10,11 +10,11 @@
 </head>
 <body>
     <main>
-        <form id="container" name="calculator" >
+        <form id="container" name="calculator">
             <h2 class="titulo">calculadora</h2>
             <div class="val"></div>
             <div class="val"></div>
-            <input class="pantalla" type="text" name="ans">
+            <input class="pantalla" type="text" name="ans" readonly="readonly">
             <br>
             <input class="boton" type="button" value="7" onclick="printOnScreen ('7')" >
             <input class="boton" type="button" value="8" onclick="printOnScreen ('8')" >
@@ -31,11 +31,13 @@
             <input class="boton" type="button" value="3" onclick="printOnScreen ('3')" >
             <input class="botonop" type="button" value="+" onclick="printOnScreenOp ('+')">
             <br>
-            <input class="botonop" type="button" value="C" onclick="deleteApp ()">
+            <input class="botonop" type="button" value="⌫" onclick="deleteCaracter()">
             <input class="boton" type="button" value="0" onclick="printOnScreen ('0')" >
-            <input class="botonop" type="button" value="=" onclick="botonIgual('=')">
+            <input class="botonop" type="button" value="." onclick="printOnScreen ('.')">
             <input class="botonop" type="button" value="-" onclick="printOnScreenOp ('-')">
             <br>
+            <input class="botonE" type="button" value="C" onclick="deleteApp ()">
+            <input class="botonE" type="button" value="=" onclick="botonIgual('=')" >
         </form>
     </main>
 </body>
