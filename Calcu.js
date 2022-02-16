@@ -20,10 +20,6 @@ class Calculadora {
     
   
     suma (num1,num2) {
-      if (isNaN(num1) || isNaN(num2)) {
-        return "entrada no valida"
-      }
-
       if (num1.includes('.') || num2.includes('.')) {
         var num = parseFloat(num1)
         var otherNum = parseFloat(num2)

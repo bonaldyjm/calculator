@@ -9,37 +9,53 @@
 
 </head>
 <body>
-    <main>
         <form id="container" name="calculator">
             <h2 class="titulo">calculadora</h2>
+            <div class="header-control">
             <div class="val"></div>
             <div class="val"></div>
             <input class="pantalla" type="text" name="ans" readonly="readonly">
+            </div>
+        <div class="main-control">
             <br>
             <input class="boton" type="button" value="7" onclick="printOnScreen ('7')" >
             <input class="boton" type="button" value="8" onclick="printOnScreen ('8')" >
             <input class="boton" type="button" value="9" onclick="printOnScreen ('9')" >
-            <input class="botonop" type="button" value="÷" onclick="printOnScreenOp ('÷')">
+            <br>
             <br>
             <input class="boton" type="button" value="4" onclick="printOnScreen ('4')" >
             <input class="boton" type="button" value="5" onclick="printOnScreen ('5')" >
             <input class="boton" type="button" value="6" onclick="printOnScreen ('6')" >
-            <input class="botonop" type="button" value="*" onclick="printOnScreenOp ('*')">
+            <br>
             <br>
             <input class="boton" type="button" value="1" onclick="printOnScreen ('1')" >
             <input class="boton" type="button" value="2" onclick="printOnScreen ('2')" >
             <input class="boton" type="button" value="3" onclick="printOnScreen ('3')" >
-            <input class="botonop" type="button" value="+" onclick="printOnScreenOp ('+')">
             <br>
-            <input class="botonop" type="button" value="⌫" onclick="deleteCaracter()">
+            <br>
             <input class="boton" type="button" value="0" onclick="printOnScreen ('0')" >
             <input class="botonop" type="button" value="." onclick="printOnScreen ('.')">
+            <input class="botonE" type="button" value="C" onclick="deleteApp ()">
+            <br>
+            <br>
+        </div>
+        <div class="nav-control">
+            <br>
+            <input class="botonop" type="button" value="⌫" onclick="deleteCaracter()">
+            <br>
+            <input class="botonop" type="button" value="÷" onclick="printOnScreenOp ('÷')">
+            <br>
+            <input class="botonop" type="button" value="x" onclick="printOnScreenOp ('*')">
+            <br>
             <input class="botonop" type="button" value="-" onclick="printOnScreenOp ('-')">
             <br>
-            <input class="botonE" type="button" value="C" onclick="deleteApp ()">
+            <input class="botonop" type="button" value="+" onclick="printOnScreenOp ('+')">
+            <br>
             <input class="botonE" type="button" value="=" onclick="botonIgual('=')" >
+            <br>
+
+        </div>
         </form>
-    </main>
 </body>
 <script src="./Calcu.js" ></script>
 </html>

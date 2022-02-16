@@ -3,49 +3,53 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    min-height: 100%;
+    background-color: #fff;
+}
 
 #container {
-    width: 25%;
-    max-width: 400%;
-    border: solid 1 px #c9c9c9;
-    padding-bottom: 10px;
-    margin: auto;
-    margin-top: 50px;
-    background: rgb(226, 224, 224);
+    display: grid;
+    grid-template-columns:auto;
+    grid-auto-rows: auto; 
+    grid-template-areas: 
+    "header header header"
+    "main main side"
+    "main main side";
     text-align: center;
-    border-radius: 40px;
+    width: 18%;
+    max-width: 400%;
+    margin: auto;
     
+    border-radius: 40px;
+    box-shadow: 0 2px 3px #d8724a;
 }
 
 .pantalla {
-    grid-column: 1/ -1;
-    width: 75%;
-    padding: 18px 36px;
-    font-size: 18px;
-    margin: 10px 2;
-    border: 1px solid black;
-    border-radius: 1px;
+    width: 100%;
+    padding: 15px 28px;
+    font-size: 29px;
     text-align: left;
-    color: #333;
-    background: #ccc;
+    color: #4c455a;
+    background: #fff;
+    overflow: hidden;
+    border: none;
 }
 
 input[type=submit], [type=reset], [type=button] {
-    background-color: #77cee4;
     font-size: 16px;
     border: none;
-    color: white;
-    padding: 16px 32px;
-    font-size: 16px;
-    min-width: 21%;
-    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    min-width: 30%;
     margin: 4px 2px;
     cursor: pointer;
+    background: none; 
 
 }
 
 .boton:hover{
-    background-color:#507983 ;
+    background-color:#d8724a ;
 }
 
 .titulo {
@@ -60,7 +64,7 @@ input[type=submit], [type=reset], [type=button] {
 }
 
 .botonop:hover {
-    background-color: #507983;
+    background-color: #d8724a;
 }
 
 .val {
@@ -70,11 +74,30 @@ input[type=submit], [type=reset], [type=button] {
     position: relative;
     top: 50px;
     right: 10px;
-    color: rgb(117, 117, 117);
+   
 }
-.botonE {
-    width: 44%;
-}
+
 .botonE:hover {
-    background-color: #507983;
+    background-color: #d8724a;
+   
 }
+.nav-control {
+    grid-area: side;
+    background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-size: 12px;
+}
+
+.header-control {
+grid-area: header; 
+}
+
+.main-control {
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+    grid-area: main;
+} 
